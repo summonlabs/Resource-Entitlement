@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+if(NOT TARGET ResourceEntitlement::resource_entitlement)
+    include("${CMAKE_CURRENT_LIST_DIR}/ResourceEntitlementTargets.cmake")
+endif()
+
+check_required_components(ResourceEntitlement)
